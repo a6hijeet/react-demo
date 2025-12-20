@@ -1,4 +1,6 @@
 import reactLogo from '../assets/react.svg'
+import Button from './Button/Button'
+import ButtonIn from './ButtonIn'
 import viteLogo from '/vite.svg'
 
 function Header() {
@@ -13,6 +15,8 @@ function Header() {
         <li><a href="/about">About</a></li>
         <li><a href="/services">Services</a></li>
         <li><a href="/contact">Contact</a></li>
+        <Button />
+        <ButtonIn />
       </ul>
     </nav>
   </header>
