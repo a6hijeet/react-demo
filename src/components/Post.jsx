@@ -1,4 +1,3 @@
-import Button from "./Button/Button";
 import Card from "./Card";
 
 function Post() {
@@ -9,7 +8,6 @@ function Post() {
 
   return ( 
    <>
-   <Button></Button>
    <div className="posts-wrapper">
        
        <Card/>
