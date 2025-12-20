@@ -1,3 +1,4 @@
+import Button from "./Button/Button";
 import Card from "./Card";
 
 function Post() {
@@ -7,11 +8,16 @@ function Post() {
   const post4 = "Post Title 4";
 
   return ( 
-    <div className="posts-wrapper">
-      <Card/>
-      <Card/>
-      <Card/>
-    </div>
+   <>
+   <Button></Button>
+   <div className="posts-wrapper">
+       
+       <Card/>
+       <Card/>
+       <Card/>
+     </div>
+   </>
+   
   )
 }
 
