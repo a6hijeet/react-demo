@@ -10,12 +10,8 @@ function Story() {
     {key: 5, name: "story 5", desc: "Story desc", views: 40, visible:true}
   ];
 
-  const storyItems = stories.map(story => 
-    <Card key={story.key} name={story.name} desc={story.desc} views={story.views} visible={story.visible}/>
-   
-  )
 
-  return (<div className="posts-wrapper">{storyItems}</div>)
+  return (<Card items={stories} category="story"/>)
 
 }
 
