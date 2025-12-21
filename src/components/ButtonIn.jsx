@@ -1,3 +1,4 @@
+import User from "./User"
 function ButtonIn(){
 
   const styles = {
@@ -8,7 +9,9 @@ function ButtonIn(){
       border:"none",
   }
   return (
-    <button style={styles}>Login</button>
+    <button style={styles}>
+      <User isLoggedIn={true} userName="ABC123"/>
+    </button>
   )
 }
 
