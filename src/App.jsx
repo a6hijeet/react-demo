@@ -3,6 +3,7 @@ import './App.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Post from './components/Post'
+import Story from './components/Story'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,6 +11,7 @@ function App() {
   return (
     <>
       <Header />
+      <Story />
       <Post />
       <Footer />
     </>

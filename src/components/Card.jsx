@@ -7,6 +7,7 @@ function Card(props) {
     <div className="card-wrapper">
       <img loading="lazy" width={250} height={150} src={cardimg}></img>
       <div className="card-title"><strong>{props.name}</strong></div>
+      {props.views ? <em>{props.views} views</em> : ""}
       <div className="card-desc">{props.desc}</div>
       <div className="card-date"><i>{props.postDate}</i></div>
       <div className="card-visibility"><i>{props.visible ? "Published" : "Unpublished"}</i></div>
