@@ -6,6 +6,7 @@ import Post from './components/Post'
 import Story from './components/Story'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Color from './components/Color'
+import Counter from './components/Counter/Counter'
 
 
 function Home() {
@@ -28,6 +29,7 @@ function App() {
           <li> <Link to="/posts">Posts </Link></li>
           <li> <Link to="/stories">Stories </Link></li>
           <li><Link to="/color">Color </Link></li>
+          <li><Link to="/counter">Counter </Link></li>
         </ul>
       </nav>
       <Routes>
@@ -35,6 +37,7 @@ function App() {
         <Route path="/posts" element={<Post />}/>
         <Route path="/stories" element={<Story />}/>
         <Route path="/color" element={<Color />}/>
+        <Route path="/counter" element={<Counter />}/>
       </Routes>
 
       <Footer />

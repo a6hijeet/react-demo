@@ -1,0 +1,7 @@
+.counter-wrapper {
+  text-align: center;
+}
+.counter-wrapper .button-wrapper {
+  justify-content: center;
+  gap: 10px;
+}
