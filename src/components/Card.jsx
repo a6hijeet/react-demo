@@ -1,5 +1,6 @@
 import cardimg from '../assets/card1.jpg'
 import PropTypes from 'prop-types'
+import LikeButton from './LikeButton';
 
 function Card(props) {
 
@@ -10,16 +11,19 @@ function Card(props) {
  // items.sort((a, b) => a.views - b.views); // Numeric
  // items.sort((a, b) => b.views - a.views); // Reverse numeric
 
-  const onlyVisible = items.filter(item => item.visible);
+  //const onlyVisible = items.filter(item => item.visible);
+
+  //const moreView = items.filter(item => item.views > 100);
   
-  const itemsList = onlyVisible.map(item => 
-    <div className="card-wrapper">
+  const itemsList = items.map(item => 
+    <div className="card-wrapper" key={item.key}>
       <img loading="lazy" width={250} height={150} src={cardimg}></img>
       <div className="card-title"><strong>{item.name}</strong></div>
       {item.views ? <em>{item.views} views</em> : ""}
       <div className="card-desc">{item.desc}</div>
       <div className="card-date"><i>{item.postDate}</i></div>
       <div className="card-visibility"><i>{item.visible ? "Published" : "Unpublished"}</i></div>
+      <LikeButton />
     </div>
   )
   return (
