@@ -2,6 +2,7 @@ import cardimg from '../assets/card1.jpg'
 import PropTypes from 'prop-types'
 import LikeButton from './LikeButton';
 import FavouriteButton from './FavouriteButton';
+import Comments from './Comments';
 
 function Card(props) {
 
@@ -28,6 +29,7 @@ function Card(props) {
         <LikeButton />
         <FavouriteButton />
       </div>
+      <Comments />
     </div>
   )
   return (
