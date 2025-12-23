@@ -14,12 +14,9 @@ function Comments() {
     }
     // Start a new timeout
       setComment([...comment, newComment])
-      console.log(comment)
       setInputValue('');
-
-    
-    
   }
+  
   return(
     <>
       <p>Comments:  </p>

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import LikeButton from './LikeButton';
 import FavouriteButton from './FavouriteButton';
 import Comments from './Comments';
+import PostComment from './PostComment/PostComment';
 
 function Card(props) {
 
@@ -29,7 +30,8 @@ function Card(props) {
         <LikeButton />
         <FavouriteButton />
       </div>
-      <Comments />
+      {category == 'post' ? <PostComment /> : <Comments />}
+      
     </div>
   )
   return (
