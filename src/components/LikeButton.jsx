@@ -1,11 +1,13 @@
+import {useState} from 'react';
+
 function LikeButton() {
-  let count = 0;
-  const handleClick = (e) => {
-    count++;
-    e.target.textContent = "Like " + count;
+  let [count, setCount] = useState(0);
+
+  const updateCount = () => {
+    setCount(count + 1);
   }
   return(
-    <button onClick={(e) => handleClick(e)}>Like {count}</button>
+    <button onClick={updateCount}>Like {count}</button>
   )
 }
 

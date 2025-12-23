@@ -1,6 +1,7 @@
 import cardimg from '../assets/card1.jpg'
 import PropTypes from 'prop-types'
 import LikeButton from './LikeButton';
+import FavouriteButton from './FavouriteButton';
 
 function Card(props) {
 
@@ -23,7 +24,10 @@ function Card(props) {
       <div className="card-desc">{item.desc}</div>
       <div className="card-date"><i>{item.postDate}</i></div>
       <div className="card-visibility"><i>{item.visible ? "Published" : "Unpublished"}</i></div>
-      <LikeButton />
+      <div className="button-wrapper">
+        <LikeButton />
+        <FavouriteButton />
+      </div>
     </div>
   )
   return (
