@@ -7,6 +7,7 @@ import Story from './components/Story'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Color from './components/Color'
 import Counter from './components/Counter/Counter'
+import ToDo from './components/todo/todo'
 
 
 function Home() {
@@ -30,6 +31,7 @@ function App() {
           <li> <Link to="/stories">Stories </Link></li>
           <li><Link to="/color">Color </Link></li>
           <li><Link to="/counter">Counter </Link></li>
+          <li><Link to="/todo">To Do </Link></li>
         </ul>
       </nav>
       <Routes>
@@ -38,6 +40,7 @@ function App() {
         <Route path="/stories" element={<Story />}/>
         <Route path="/color" element={<Color />}/>
         <Route path="/counter" element={<Counter />}/>
+        <Route path="/todo" element={<ToDo />}/>
       </Routes>
 
       <Footer />
