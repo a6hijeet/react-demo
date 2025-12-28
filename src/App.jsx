@@ -9,6 +9,7 @@ import Color from './components/Color'
 import Counter from './components/Counter/Counter'
 import ToDo from './components/todo/todo'
 import ContextTest from './components/College/ContextTest'
+import useToggle from './useToggle'
 
 
 function Home() {
@@ -20,7 +21,7 @@ function Home() {
   )
 }
 function App() {
-  const [count, setCount] = useState(0)
+  const [value, toggleValue] = useToggle(false);
 
   return (
     <BrowserRouter>
@@ -45,8 +46,10 @@ function App() {
         <Route path="/todo" element={<ToDo />}/>
         <Route path="/context" element={<ContextTest />}/>
       </Routes>
-
-      <Footer />
+      <button onClick={() => toggleValue(!value)}>Toggle Footer</button>
+      {
+        value ? <Footer /> : null
+      }
     </BrowserRouter>
   )
 }
