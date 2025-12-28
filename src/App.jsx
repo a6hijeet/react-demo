@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Color from './components/Color'
 import Counter from './components/Counter/Counter'
 import ToDo from './components/todo/todo'
+import ContextTest from './components/College/ContextTest'
 
 
 function Home() {
@@ -32,6 +33,7 @@ function App() {
           <li><Link to="/color">Color </Link></li>
           <li><Link to="/counter">Counter </Link></li>
           <li><Link to="/todo">To Do </Link></li>
+          <li><Link to="/context">Context API</Link></li>
         </ul>
       </nav>
       <Routes>
@@ -41,6 +43,7 @@ function App() {
         <Route path="/color" element={<Color />}/>
         <Route path="/counter" element={<Counter />}/>
         <Route path="/todo" element={<ToDo />}/>
+        <Route path="/context" element={<ContextTest />}/>
       </Routes>
 
       <Footer />
